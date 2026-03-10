@@ -14,12 +14,34 @@
 
 ## 安装
 
-### 1. 安装插件
-
-将插件目录复制到 OpenClaw 插件目录：
+### 方式 A：Git Clone（推荐）
 
 ```bash
-cp -r superpowers-bridge ~/.openclaw/workspace/plugins/
+cd ~/.openclaw/workspace/plugins
+git clone https://github.com/vruru/superpowers-bridge.git
+```
+
+### 方式 B：下载 ZIP
+
+1. 点击仓库页面的 **Code** → **Download ZIP**
+2. 下载后解压得到 `superpowers-bridge-main/` 目录
+3. 重命名并复制到插件目录：
+
+```bash
+mv ~/Downloads/superpowers-bridge-main ~/.openclaw/workspace/plugins/superpowers-bridge
+```
+
+### 通用后续步骤
+
+无论哪种方式，完成后目录结构应该是：
+
+```
+~/.openclaw/workspace/plugins/superpowers-bridge/
+├── index.ts
+├── README.md
+├── package.json
+├── openclaw.plugin.json
+└── .gitignore
 ```
 
 ### 2. 配置 OpenClaw
