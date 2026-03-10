@@ -1,0 +1,36 @@
+{
+  "id": "superpowers-bridge",
+  "name": "Superpowers Bridge",
+  "description": "Bridge to Superpowers workflow skills - auto-fetches from GitHub",
+  "version": "2.1.0",
+  "kind": "extension",
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "enabled": {
+        "type": "boolean",
+        "default": true
+      },
+      "skillsRepo": {
+        "type": "string",
+        "default": "https://github.com/obra/superpowers.git",
+        "description": "GitHub repository URL for Superpowers skills"
+      },
+      "docsPath": {
+        "type": "string",
+        "default": "docs/superpowers"
+      },
+      "autoDetectCode": {
+        "type": "boolean",
+        "default": true,
+        "description": "Auto-detect code tasks and load relevant skills"
+      },
+      "autoUpdate": {
+        "type": "boolean",
+        "default": false,
+        "description": "Auto-update skills on plugin start (not recommended)"
+      }
+    }
+  }
+}
