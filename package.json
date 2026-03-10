@@ -1,11 +1,11 @@
 {
-  "name": "superpowers-bridge",
+  "name": "@vruru/superpowers-bridge",
   "version": "2.1.0",
   "description": "Bridge to Superpowers workflow skills for OpenClaw - auto-fetches from GitHub",
   "type": "module",
   "main": "index.ts",
   "keywords": ["openclaw", "superpowers", "skills", "workflow"],
-  "author": "",
+  "author": "vruru",
   "license": "MIT",
   "openclaw": {
     "extensions": ["./index.ts"]
@@ -13,5 +13,14 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/vruru/superpowers-bridge"
-  }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "index.ts",
+    "openclaw.plugin.json",
+    "README.md",
+    "src/"
+  ]
 }

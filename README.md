@@ -14,39 +14,23 @@ Based on the [obra/superpowers](https://github.com/obra/superpowers) project.
 
 ## Installation
 
-### Option A: Git Clone (Recommended)
+### Option A: npm Install (Easiest)
+
+```bash
+openclaw plugins install @vruru/superpowers-bridge
+openclaw gateway restart
+```
+
+This automatically installs and enables the plugin.
+
+### Option B: Git Clone
 
 ```bash
 cd ~/.openclaw/workspace/plugins
 git clone https://github.com/vruru/superpowers-bridge.git
 ```
 
-### Option B: Download ZIP
-
-1. Click **Code** → **Download ZIP** on the repository page
-2. Extract the downloaded `superpowers-bridge-main/` directory
-3. Rename and copy to plugins directory:
-
-```bash
-mv ~/Downloads/superpowers-bridge-main ~/.openclaw/workspace/plugins/superpowers-bridge
-```
-
-### Post-Installation
-
-After either method, the directory structure should be:
-
-```
-~/.openclaw/workspace/plugins/superpowers-bridge/
-├── index.ts
-├── README.md
-├── package.json
-├── openclaw.plugin.json
-└── .gitignore
-```
-
-### Enable the Plugin
-
-Add plugin configuration to `~/.openclaw/openclaw.json`:
+Then enable in `~/.openclaw/openclaw.json`:
 
 ```json
 {
@@ -64,7 +48,32 @@ Add plugin configuration to `~/.openclaw/openclaw.json`:
 }
 ```
 
-### Restart OpenClaw
+### Option C: Download ZIP
+
+1. Click **Code** → **Download ZIP** on the repository page
+2. Extract the downloaded `superpowers-bridge-main/` directory
+3. Rename and copy to plugins directory:
+
+```bash
+mv ~/Downloads/superpowers-bridge-main ~/.openclaw/workspace/plugins/superpowers-bridge
+```
+
+Then enable as shown in Option B.
+
+### Post-Installation
+
+After installation, the directory structure should be:
+
+```
+~/.openclaw/workspace/plugins/superpowers-bridge/
+├── index.ts
+├── README.md
+├── package.json
+├── openclaw.plugin.json
+└── .gitignore
+```
+
+Restart OpenClaw:
 
 ```bash
 openclaw gateway restart
