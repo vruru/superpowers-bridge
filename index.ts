@@ -48,7 +48,14 @@ const ALWAYS_LOAD_SKILLS = ["using-superpowers"];
 function getCacheDir(): string {
   // Plugin directory is where this file is located
   const pluginDir = path.dirname(new URL(import.meta.url).pathname);
-  return path.join(pluginDir, CACHE_DIR_NAME);
+  
+  // On Windows, pathname from URL starts with /C:/ or similar
+  // We need to remove the leading slash for proper path joining
+  const normalizedPluginDir = process.platform === 'win32' && pluginDir.startsWith('/')
+    ? pluginDir.substring(1).replace(/\//g, '\\')
+    : pluginDir;
+    
+  return path.join(normalizedPluginDir, CACHE_DIR_NAME);
 }
 
 /**
